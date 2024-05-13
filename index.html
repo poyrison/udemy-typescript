@@ -7,6 +7,26 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    타입스크립트
+    <input id="sum1Value" placeholder="sum1" />
+    <input id="sum2Value" placeholder="sum2" />
+    <button id="clickBtn">계산</button>
   </body>
+  <script>
+    const button = document.querySelector("#clickBtn");
+    button.addEventListener("click", () => {
+      let sum1 = parseInt(document.getElementById("sum1Value").value);
+      let sum2 = parseInt(document.getElementById("sum2Value").value);
+      if (isNaN(sum1)) {
+        sum1 = 0;
+      }
+      if (isNaN(sum2)) {
+        sum2 = 0;
+      }
+      try {
+        Test(sum1, sum2);
+      } catch (err) {
+        console.log(err);
+      }
+    });
+  </script>
 </html>
