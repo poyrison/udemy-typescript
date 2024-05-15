@@ -9,10 +9,10 @@ const person: {
   role: [number, string]; // 튜플 타입
 } = {
   // 타입을 추론
-  name: "Maximilian",
+  name: "JunSik",
   age: 30,
-  hobbies: ["Sports", "Cooking"],
-  role: [2, "author"], // role: (string | number)[] 유니온 타입
+  hobbies: ["Sports", "Listening to music"],
+  role: [2, "author"],
 };
 
 // person.role.push("admin"); // push는 튜플에서 허용되는 일종의 예외이다.

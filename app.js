@@ -5,10 +5,10 @@
 // }
 const person = {
     // 타입을 추론
-    name: "Maximilian",
+    name: "JunSik",
     age: 30,
-    hobbies: ["Sports", "Cooking"],
-    role: [2, "author"], // role: (string | number)[] 유니온 타입
+    hobbies: ["Sports", "Listening to music"],
+    role: [2, "author"],
 };
 // person.role.push("admin"); // push는 튜플에서 허용되는 일종의 예외이다.
 // person.role[1] = 10; // 두 번째 값은 문자열이어야 하기 때문에 10을 두 번째 값으로 정의할 수 없다.
