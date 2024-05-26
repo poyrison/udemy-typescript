@@ -1,20 +1,14 @@
 "use strict";
-// const person: { 타입을 명시적으로 정의
-//   name: string;
-//   age: number;
-// }
-const person = {
-    // 타입을 추론
-    name: "JunSik",
-    age: 30,
-    hobbies: ["Sports", "Listening to music"],
-    role: [2, "author"],
-};
-// person.role.push("admin"); // push는 튜플에서 허용되는 일종의 예외이다.
-// person.role[1] = 10; // 두 번째 값은 문자열이어야 하기 때문에 10을 두 번째 값으로 정의할 수 없다.
-let favoriteActivity;
-favoriteActivity = ["Sports"];
-console.log(person.name);
-for (const hobby of person.hobbies) {
-    console.log(hobby.toUpperCase());
+// unknown 타입
+let userInput; // any보다 unknown이 조금 더 나은 이유는 조금이라도 타입 체크를 한다는 점
+let userName;
+userInput = 5;
+userInput = "Max";
+if (typeof userInput === "string") {
+    userName = userInput;
 }
+// 절대 타입
+const generateError = (message, code) => {
+    throw { message: message, errorCode: code };
+};
+generateError("An error occurred!", 500);
